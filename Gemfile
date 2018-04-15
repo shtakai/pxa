@@ -14,8 +14,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'bootsnap', '>= 1.1.0', require: false
 gem 'rubocop', '~> 0.52.1'
 gem 'rubocop-rspec', '~> 1.22.1'
-
-gem "hashid-rails", "~> 1.0"
+gem 'hashid-rails', '~> 1.0'
 
 group :development, :test do
   gem 'rspec-rails'
@@ -50,6 +49,7 @@ group :test do
   gem 'launchy'
   gem 'selenium-webdriver'
   gem 'shoulda-matchers'
+  gem 'rspec_junit_formatter'
 end
 
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]

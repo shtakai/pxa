@@ -3,19 +3,19 @@ jobs:
   build:
     parallelism: 3
     docker:
-      - image: circleci/ruby:2.5.0-node
+      - image: circleci/ruby:2.4-node
         environment:
           BUNDLE_JOBS: 3
           BUNDLE_RETRY: 3
           BUNDLE_PATH: vendor/bundle
-          POSTGRES_HOST: 127.0.0.1
-          POSTGRES_USER: postgres
-          POSTGRES_PASSWORD: postgres
+          PGHOST: 127.0.0.1
+          PGUSER: postgres
           RAILS_ENV: test
       - image: circleci/postgres:9.5-alpine
         environment:
           POSTGRES_USER: postgres
-          POSTGRES_PASSWORD: postgres
+          POSTGRES_DB: pxa_test
+          POSTGRES_PASSWORD: ""
     steps:
       - checkout
 

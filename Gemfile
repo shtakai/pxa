@@ -20,14 +20,18 @@ group :development, :test do
   gem 'factory_bot_rails'
   gem 'guard-rspec'
   gem 'spring-commands-rspec'
-  gem 'pronto'
-  gem 'pronto-brakeman', require: false
-  gem 'pronto-flay', require: false
-  gem 'pronto-rails_best_practices', require: false
-  gem 'pronto-rails_schema', require: false
-  gem 'pronto-rubocop', require: false
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
 end
+
+# group :ci do
+#   gem 'pronto'
+#   gem 'pronto-brakeman', require: false
+#   gem 'pronto-flay', require: false
+#   gem 'pronto-rails_best_practices', require: false
+#   gem 'pronto-rails_schema', require: false
+#   gem 'pronto-rubocop', require: false
+# end
+#
 
 group :development do
   gem 'pry-rails'

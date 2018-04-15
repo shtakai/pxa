@@ -3,7 +3,7 @@ jobs:
   build:
     parallelism: 3
     docker:
-      - image: circleci/ruby:2.5.0
+      - image: circleci/ruby:2.5.0-node
         environment:
           BUNDLE_JOBS: 3
           BUNDLE_RETRY: 3
@@ -40,21 +40,21 @@ jobs:
           paths:
             - vendor/bundle
 
-      # # Only necessary if app uses webpacker or yarn in some other way
-      # - restore_cache:
-      #     keys:
-      #       - rails-demo-yarn-{{ checksum "yarn.lock" }}
-      #       - rails-demo-yarn-
-      #
-      # - run:
-      #     name: Yarn Install
-      #     command: yarn install --cache-folder ~/.cache/yarn
-      #
-      # # Store yarn / webpacker cache
-      # - save_cache:
-      #     key: rails-demo-yarn-{{ checksum "yarn.lock" }}
-      #     paths:
-      #       - ~/.cache/yarn
+      # Only necessary if app uses webpacker or yarn in some other way
+      - restore_cache:
+          keys:
+            - rails-demo-yarn-{{ checksum "yarn.lock" }}
+            - rails-demo-yarn-
+
+      - run:
+          name: Yarn Install
+          command: yarn install --cache-folder ~/.cache/yarn
+
+      # Store yarn / webpacker cache
+      - save_cache:
+          key: rails-demo-yarn-{{ checksum "yarn.lock" }}
+          paths:
+            - ~/.cache/yarn
 
       - run:
           name: Wait for DB

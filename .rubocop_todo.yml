@@ -20,6 +20,13 @@ Layout/EmptyLines:
   Exclude:
     - 'Gemfile'
 
+Layout/EmptyLinesAroundBlockBody:
+  Exclude:
+    - 'db/schema.rb'
+
+Style/BlockComments:
+  Exclude:
+    - 'spec/spec_helper.rb'
 # Offense count: 2
 # Cop supports --auto-correct.
 # Configuration parameters: EnforcedStyle, EnforcedStyleForEmptyBrackets.
@@ -38,13 +45,21 @@ Style/Documentation:
     - 'app/mailers/application_mailer.rb'
     - 'app/models/application_record.rb'
     - 'config/application.rb'
+    - 'spec/spec_helper.rb'
 
 # Offense count: 36
 # Cop supports --auto-correct.
 # Configuration parameters: EnforcedStyle.
 # SupportedStyles: when_needed, always, never
 Style/FrozenStringLiteralComment:
-  Enabled: false
+  Enabled: true
+  Exclude:
+    - 'config.ru'
+    - 'Rakefile'
+    - 'Gemfile'
+    - 'Gemfile.lock'
+    - 'bin/**'
+    - 'db/schema.rb'
 
 # Offense count: 2
 Style/MixinUsage:
@@ -75,6 +90,8 @@ Style/StringLiterals:
     - 'config/application.rb'
     - 'config/environments/production.rb'
     - 'config/puma.rb'
+    - 'db/schema.rb'
+    - 'spec/rails_helper.rb'
 
 # Offense count: 2
 # Cop supports --auto-correct.

@@ -27,6 +27,6 @@ rspec:
   script:
     - RAILS_ENV=test bundle exec rspec
 
-pronto:
+rubocop:
   script:
-    - bundle exec pronto run -c=origin/master --exit-code
+    - bundle exec rubocop --rails

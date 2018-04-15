@@ -1,5 +1,7 @@
 {
   "name": "pxa",
   "private": true,
-  "dependencies": {}
+  "dependencies": {
+    "faker": "^4.1.0"
+  }
 }

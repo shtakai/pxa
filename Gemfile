@@ -14,6 +14,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'bootsnap', '>= 1.1.0', require: false
 gem 'rubocop', '~> 0.52.1'
 gem 'rubocop-rspec', '~> 1.22.1'
+gem 'hashid-rails', '~> 1.0'
 
 group :development, :test do
   gem 'rspec-rails'
@@ -23,7 +24,18 @@ group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
 end
 
+# group :ci do
+#   gem 'pronto'
+#   gem 'pronto-brakeman', require: false
+#   gem 'pronto-flay', require: false
+#   gem 'pronto-rails_best_practices', require: false
+#   gem 'pronto-rails_schema', require: false
+#   gem 'pronto-rubocop', require: false
+# end
+#
+
 group :development do
+  gem 'pry-rails'
   gem 'web-console', '>= 3.3.0'
   gem 'listen', '>= 3.0.5', '< 3.2'
   gem 'spring'
@@ -37,6 +49,7 @@ group :test do
   gem 'launchy'
   gem 'selenium-webdriver'
   gem 'shoulda-matchers'
+  gem 'rspec_junit_formatter'
 end
 
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]

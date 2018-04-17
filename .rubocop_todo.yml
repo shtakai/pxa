@@ -19,6 +19,8 @@ Bundler/OrderedGems:
 Layout/EmptyLines:
   Exclude:
     - 'Gemfile'
+    - 'db/**'
+    - 'db/migrate/**'
 
 Layout/EmptyLinesAroundBlockBody:
   Exclude:
@@ -38,14 +40,7 @@ Layout/SpaceInsideArrayLiteralBrackets:
 
 # Offense count: 4
 Style/Documentation:
-  Exclude:
-    - 'spec/**/*'
-    - 'test/**/*'
-    - 'app/helpers/application_helper.rb'
-    - 'app/mailers/application_mailer.rb'
-    - 'app/models/application_record.rb'
-    - 'config/application.rb'
-    - 'spec/spec_helper.rb'
+  Enabled: false
 
 # Offense count: 36
 # Cop supports --auto-correct.
@@ -60,6 +55,7 @@ Style/FrozenStringLiteralComment:
     - 'Gemfile.lock'
     - 'bin/**'
     - 'db/schema.rb'
+    - 'db/**'
 
 # Offense count: 2
 Style/MixinUsage:
@@ -90,7 +86,8 @@ Style/StringLiterals:
     - 'config/application.rb'
     - 'config/environments/production.rb'
     - 'config/puma.rb'
-    - 'db/schema.rb'
+    - 'db/**'
+    - 'db/migrate/**'
     - 'spec/rails_helper.rb'
 
 # Offense count: 2
@@ -105,3 +102,25 @@ Style/SymbolArray:
 # URISchemes: http, https
 Metrics/LineLength:
   Max: 130
+  Exclude:
+    - 'config/initializers/devise.rb'
+
+Layout/TrailingWhitespace:
+  Exclude:
+    - 'db/**'
+
+Metrics/MethodLength:
+  Exclude:
+    - 'db/**'
+    - 'db/migrate/**'
+
+Layout/SpaceAfterSemicolon:
+  Enabled: false
+
+Style/NumericLiterals:
+  Exclude:
+    - 'db/schema.rb'
+
+Layout/EndOfLine:
+  Enabled: false
+

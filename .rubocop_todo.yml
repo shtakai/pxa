@@ -120,3 +120,6 @@ Layout/SpaceAfterSemicolon:
 Style/NumericLiterals:
   Exclude:
     - 'db/schema.rb'
+
+Layout/EndOfLine:
+  - Enabled: false

@@ -10,7 +10,6 @@ gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.2'
 gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
-
 gem 'bootsnap', '>= 1.1.0', require: false
 gem 'rubocop', '~> 0.52.1'
 gem 'rubocop-rspec', '~> 1.22.1'
@@ -23,16 +22,6 @@ group :development, :test do
   gem 'spring-commands-rspec'
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
 end
-
-# group :ci do
-#   gem 'pronto'
-#   gem 'pronto-brakeman', require: false
-#   gem 'pronto-flay', require: false
-#   gem 'pronto-rails_best_practices', require: false
-#   gem 'pronto-rails_schema', require: false
-#   gem 'pronto-rubocop', require: false
-# end
-#
 
 group :development do
   gem 'pry-rails'

@@ -14,6 +14,7 @@ gem 'bootsnap', '>= 1.1.0', require: false
 gem 'rubocop', '~> 0.52.1'
 gem 'rubocop-rspec', '~> 1.22.1'
 gem 'hashid-rails', '~> 1.0'
+gem 'devise'
 
 group :development, :test do
   gem 'rspec-rails'

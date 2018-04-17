@@ -122,4 +122,5 @@ Style/NumericLiterals:
     - 'db/schema.rb'
 
 Layout/EndOfLine:
-  - Enabled: false
+  Enabled: false
+

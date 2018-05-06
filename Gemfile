@@ -20,6 +20,7 @@ group :development, :test do
   gem 'rspec-rails'
   gem 'factory_bot_rails'
   gem 'guard-rspec'
+  gem 'awesome_print'
   gem 'spring-commands-rspec'
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
 end
@@ -30,6 +31,7 @@ group :development do
   gem 'listen', '>= 3.0.5', '< 3.2'
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
+  gem 'solargraph'
 end
 
 group :test do
